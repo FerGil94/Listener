@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+
+	<label>txtizq</label>
+	<input type="text" id="txtizq">
+	<label>txtder</label>
+	<input type="text" id="txtder">
+	<button id="btnmover">Mover</button>
+    <button id="btneliminar">Eliminar</button>
+	<script>
+		function mover1(e) {
+			var elemDer = document.getElementById("txtder").value;
+			var elemIzq = document.getElementById("txtder").value = document
+					.getElementById("txtizq").value;
+			document.getElementById("txtizq").value = elemDer;
+
+		}
+        function eliminar(e){
+        	document.getElementById("txtder").value = (" ");
+        	document.getElementById("txtizq").value = (" ");
+        }
+		btnmover.addEventListener("click", mover1);
+		btneliminar.addEventListener("click", eliminar);
+	</script>
+</body>
+</html>
